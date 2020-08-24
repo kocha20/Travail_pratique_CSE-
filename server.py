@@ -3,7 +3,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 class Server (BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/":
-            self.path = '/Equador.html'
+            self.path = '/index.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
@@ -15,7 +15,7 @@ class Server (BaseHTTPRequestHandler):
     
     def do_POST(self):
         if self.path == "/":
-            self.path = '/Equador.html'
+            self.path = '/index.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
@@ -27,7 +27,7 @@ class Server (BaseHTTPRequestHandler):
 
     def do_PUT(self):
         if self.path == "/":
-            self.path = '/Equador.html'
+            self.path = '/index.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
@@ -39,7 +39,7 @@ class Server (BaseHTTPRequestHandler):
     
     def do_DELETE(self):
         if self.path == "/":
-            self.path = '/Equador.html'
+            self.path = '/index.html'
         try:
             file_to_open = open(self.path[1:]).read()
             self.send_response(200)
